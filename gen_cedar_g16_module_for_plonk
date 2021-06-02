@@ -1,7 +1,7 @@
 #! /bin/bash
 
-for ii in *.com ; do
-    i=${ii%.com}
+for ii in *.gjf ; do
+    i=${ii%.gjf}
 
     cat > ${i}.sh <<EOF
 #! /bin/bash
@@ -17,7 +17,7 @@ mkdir temporarydir_\${input}
 mv    \${input}.* temporarydir_\${input}
 cd    temporarydir_\${input}
 
-g16 < \${input}.com >& \${input}.log
+g16 < \${input}.gjf >& \${input}.log
 
 mv \${input}.* ..
 
