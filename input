@@ -1,81 +1,44 @@
 %chk=Will.chk
-
 %MEM=2GB
-
 %nproc=32
-
 #M062X 6-31G* OPT=ModRedundant
 
- 
-
 H3C...H...OH  TS calculation
 
- 
-
 0 2
-
 6           0       -0.994402   -0.690070   -0.002437
-
 1           0       -0.619601   -1.711622    0.019687
-
 1           0       -0.505241   -0.182692    1.089941
-
 1           0       -0.586223   -0.094506   -0.816266
-
 1           0       -2.075741   -0.621216    0.095494
-
 8           0       -0.127975    0.473907    2.084450
-
 1           0       -0.552334    1.327691    1.880606
 
- 
-
 B 1 3 F
-
 B 3 6 F
 
- 
-
 --Link1--
-
 %chk=Will.chk
-
 %MEM=2GB
-
 %nproc=32
-
 #M062x 6-31G* Geom=(checkpoint,modredundant) Guess=Read Freq
 
- 
-
 H3C...H...OH  TS calculation
 
- 
-
 0 2
-
- 
 
 B 1 3 A
-
 B 3 6 A
 
- 
-
 --Link1--
-
 %chk=Will.chk
-
 %MEM=2GB
-
 %nproc=32
-
 #M062x 6-31G* Geom=CheckPoint Guess=Read OPT=(TS,ReadFC,NoEigenTest) Freq
-
- 
 
 H3C...H...OH  TS calculation
 
- 
-
 0 2
+
+
+
