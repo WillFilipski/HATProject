@@ -12,7 +12,7 @@ for ii in *.gjf ; do
 #SBATCH -N 1
 #SBATCH -n 32
 #SBATCH --mem-per-cpu=4000M
-#SBATCH --account=rrg-dilabiog
+#SBATCH --account=ctb-dilabiog
 
 	export g16root=/opt/software/gaussian
 	. \$g16root/g16/bsd/g16.profile
