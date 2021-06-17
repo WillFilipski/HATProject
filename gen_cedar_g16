@@ -3,7 +3,7 @@
 for ii in *.gjf ; do
     i=${ii%.gjf}
 
-    cat > ${i}.sh <<EOF
+    cat > ${i}.sub <<EOF
 #! /bin/bash
 #SBATCH -t 28-00:00
 #SBATCH -J ${i}
