@@ -14,24 +14,9 @@ for ii in *.gjf ; do
 #SBATCH --mem-per-cpu=4000M
 #SBATCH --account=ctb-dilabiog
 
-	export g16root=/opt/software/gaussian
-	. \$g16root/g16/bsd/g16.profile
-       
-input=${i}
-
-cd \$SLURM_SUBMIT_DIR
-
-mkdir temporarydir_\${input}
-mv    \${input}.* temporarydir_\${input}
-cd    temporarydir_\${input}
+module load gaussian
 
 g16 < \${input}.gjf >& \${input}.log
-
-mv \${input}.* ..
-
-cd ..
-
-rm -r temporarydir_\${input}
 
 EOF
 done
