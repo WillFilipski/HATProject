@@ -16,7 +16,7 @@ for ii in *.gjf ; do
 
 module load gaussian
 
-g16 < \${input}.gjf >& \${input}.log
+g16 < ${i}.gjf >& ${i}.log
 
 EOF
 done
