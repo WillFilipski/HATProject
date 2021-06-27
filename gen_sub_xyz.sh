@@ -19,7 +19,6 @@ EOF
                 echo "$LINE" >> "${i}.gjf"
             fi
     done < "./${i}.xyz"
-
     echo "READ: ${i}.xyz"
 done
     
@@ -56,3 +55,5 @@ EOF
 done
 
 bash ./gen_cedar_g16.sh
+
+echo "Done"
