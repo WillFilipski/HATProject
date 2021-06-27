@@ -1,9 +1,7 @@
 #! /bin/bash
 
 for ii in *.xyz; do
-    #ITERATE FILES
     i=${ii%.xyz}
-
     cat > ${i}.gjf <<EOF
 %chk=${i}.chk
 %MEM=32GB
@@ -26,13 +24,10 @@ EOF
 done
     
 for ii in *.xyz; do
-    #ITERATE FILES
     i=${ii%.xyz}
-
     read -p "WRITE ${i}.gjf | Bonds to freeze:" B1 B2 B3
     echo -e "\nB $B1 $B2 F" >> "${i}.gjf"
     echo -e "B $B2 $B3 F\n" >> "${i}.gjf"
-
     cat >> ${i}.gjf <<EOF
 --Link1--
 %chk=${i}.chk
