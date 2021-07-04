@@ -8,7 +8,7 @@ for ii in *.xyz; do
 %nproc=8
 #M062X 6-31G* OPT=ModRedundant
 
-H3C...H...OH  TS calculation
+(1.3A) H3C...H...OH (1.25A) | TS calculation
 
 0 2
 EOF
