@@ -8,7 +8,7 @@ for ii in *.xyz; do
 %nproc=8
 #M062X 6-31G* OPT=ModRedundant
 
-(1.3A) H3C...H...OH (1.25A) | TS calculation
+Step 1 | TS calculation
 
 0 2
 EOF
@@ -43,7 +43,7 @@ for ii in *.xyz; do
 %nproc=8
 #M062x 6-31G* Geom=(checkpoint,modredundant) Guess=Read Freq
 
-H3C...H...OH  TS calculation
+Step 2 | TS calculation
 
 0 2
 
@@ -56,7 +56,7 @@ B $B2 $B3 A
 %nproc=8
 #M062x 6-31G* Geom=CheckPoint Guess=Read OPT=(TS,ReadFC,NoEigenTest) Freq
 
-H3C...H...OH  TS calculation
+Step 3 | TS calculation
 
 0 2
 
