@@ -19,7 +19,7 @@ EOF
                 echo "$LINE" >> "${i}.gjf"
             fi
     done < "./${i}.xyz"
-    echo "READ: ${i}.xyz"
+    echo "Reading coordinates: ${i}.xyz"
 done
     
 for ii in *.xyz; do
