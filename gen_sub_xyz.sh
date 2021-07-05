@@ -24,7 +24,16 @@ done
     
 for ii in *.xyz; do
     i=${ii%.xyz}
-    read -p "WRITE ${i}.gjf | Bonds: " B1 B2 B3
+    
+    while read -r F C H O ; do
+        if [[ "$F" =~ "${i}" ]] ; then
+            echo "Reading bond data: ${i}"
+            B1=${C:1}
+            B2=${H:1}
+            B3=$(echo ${O:1})
+        fi
+    done < "bonds.txt"
+    
     echo -e "\nB $B1 $B2 F" >> "${i}.gjf"
     echo -e "B $B2 $B3 F\n" >> "${i}.gjf"
     cat >> ${i}.gjf <<EOF
