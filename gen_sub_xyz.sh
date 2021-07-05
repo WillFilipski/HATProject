@@ -13,7 +13,7 @@ Step 1 | TS calculation
 0 2
 EOF
     while read -r LINE ; do
-            if [[ "$LINE" =~ "Bonds" ]] ; then
+            if ["$LINE" =~ "Bonds"] ; then
                 break
             else
                 echo "$LINE" >> "${i}.gjf"
@@ -26,7 +26,7 @@ for ii in *.xyz; do
     i=${ii%.xyz}
     
     while read -r F C H O ; do
-        if [[ "$F" =~ "${i}" ]] ; then
+        if ["$F" =~ "${i}"] ; then
             echo "Reading bond data: ${i}"
             B1=${C:1}
             B2=${H:1}
