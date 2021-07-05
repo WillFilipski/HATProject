@@ -12,6 +12,8 @@ Step 1 | TS calculation
 
 0 2
 EOF
+echo "Reading coordinates: ${i}.xyz"
+
     while read -r LINE ; do
             if [[ "$LINE" =~ "Bonds" ]] ; then
                 break
@@ -19,7 +21,6 @@ EOF
                 echo "$LINE" >> "${i}.gjf"
             fi
     done < "./${i}.xyz"
-    echo "Reading coordinates: ${i}.xyz"
 done
     
 for ii in *.xyz; do
