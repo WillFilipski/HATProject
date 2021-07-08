@@ -21,7 +21,7 @@ EOF
     done < "./${i}.xyz"
     echo "Reading coordinates: ${i}.xyz"
 done
-    
+echo "Successfully read molecular coordinates."
 for ii in *.xyz; do
     i=${ii%.xyz}
     
@@ -33,7 +33,7 @@ for ii in *.xyz; do
             B3=$(echo ${O:1})
         fi
     done < "bonds.txt"
-    
+    echo "Successfully transposed bond information"
     echo -e "\nB $B1 $B2 F" >> "${i}.gjf"
     echo -e "B $B2 $B3 F\n" >> "${i}.gjf"
     cat >> ${i}.gjf <<EOF
