@@ -69,12 +69,12 @@ bash ./gen_cedar_g16.sh
 echo "Submit jobs to queue? Y/N"
 read ANS
 case $ANS in
-    [Yy])
+    [Yy] | [Yy][Ee][Ss])
     echo "Submitting jobs..."
     for i in *.sub ; do sbatch $i ; done
     ;;
 
-    [Nn])
+    [Nn] | [Nn][Oo])
     echo "Quitting program..."
     ;;
 
