@@ -63,6 +63,7 @@ Step 3 | TS calculation
 EOF
 done
 
+echo "Executing ./gen_cedar_g16.sh"
 bash ./gen_cedar_g16.sh
 
 echo "Done"
