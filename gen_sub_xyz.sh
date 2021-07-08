@@ -67,6 +67,6 @@ echo "Executing ./gen_cedar_g16.sh"
 bash ./gen_cedar_g16.sh
 
 echo "Submitting jobs..."
-for i in *.sh; do sbatch $i; done
+for i in *.sub; do sbatch $i; done
 
 echo "Done"
