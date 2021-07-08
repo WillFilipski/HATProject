@@ -33,7 +33,6 @@ for ii in *.xyz; do
             B3=$(echo ${O:1})
         fi
     done < "bonds.txt"
-    echo "Successfully transposed bond information."
     echo -e "\nB $B1 $B2 F" >> "${i}.gjf"
     echo -e "B $B2 $B3 F\n" >> "${i}.gjf"
     cat >> ${i}.gjf <<EOF
@@ -62,7 +61,7 @@ Step 3 | TS calculation
 
 EOF
 done
-
+echo "Successfully transposed bond information."
 echo "Executing ./gen_cedar_g16.sh"
 bash ./gen_cedar_g16.sh
 
