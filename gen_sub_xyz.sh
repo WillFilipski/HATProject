@@ -12,14 +12,14 @@ Step 1 | TS calculation
 
 0 2
 EOF
-echo "Reading coordinates: ${i}.xyz"
-
     while read -r LINE ; do
-            if [[ "$LINE" =~ "Bonds" ]] ; then
-                break
-            else
-                echo "$LINE" >> "${i}.gjf"
-            fi
+       echo "Reading coordinates: ${i}.xyz"
+       
+       if [[ "$LINE" =~ "Bonds" ]] ; then
+           break
+       else
+           echo "$LINE" >> "${i}.gjf"
+       fi
     done < "./${i}.xyz"
 done
     
