@@ -61,8 +61,12 @@ Step 3 | TS calculation
 
 EOF
 done
+
 echo "Successfully transposed bond information."
 echo "Executing ./gen_cedar_g16.sh"
 bash ./gen_cedar_g16.sh
+
+echo "Submitting jobs..."
+for i in *.sh; do sbatch $i; done
 
 echo "Done"
