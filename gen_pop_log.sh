@@ -3,14 +3,14 @@
 for ii in *.log ; do
     i=${ii%.log}
     cat > ${i}.gjf << EOF
-%chk=input.chk
+%chk=${i}.chk
 %MEM=32GB
 %nproc=8
 #M062X 6-311+G** POP=NBO
 
 Population analysis
 
-0 1
+0 2
 EOF
     awk '
     /Input/ { rec=""; f=1 }
