@@ -32,7 +32,7 @@ for ii in *.xyz; do
             B2=${H:1}
             B3=$(echo ${O:1})
         fi
-    done < "bonds.txt"
+    done < "bonds.coord"
     echo -e "\nB $B1 $B2 F" >> "${i}.gjf"
     echo -e "B $B2 $B3 F\n" >> "${i}.gjf"
     cat >> ${i}.gjf <<EOF
