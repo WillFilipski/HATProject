@@ -34,6 +34,17 @@ for ii in *.txt ; do
     echo "Formatted coordinates from ${i}.txt"
     rm ${i}.txt
     echo "Now deleted."
+
+while read -r F C H O ; do
+        if [[ "$F" =~ "${i}" ]] ; then
+            echo "Reading bond data: ${i}"
+            B1=${C:1}
+            B2=${H:1}
+            B3=$(echo ${O:1})
+        fi
+    done < "bonds.coord"
+    echo -e "\nB $B1 $B2 F" >> "${i}.gjf"
+    echo -e "B $B2 $B3 F\n" >> "${i}.gjf"
 done
 
 echo "Successfully transposed bond information."
