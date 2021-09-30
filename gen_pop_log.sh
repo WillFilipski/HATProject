@@ -1,4 +1,4 @@
-#1 /bin/bash
+#! /bin/bash
 
 for ii in *.log ; do
     i=${ii%.log}
