@@ -17,7 +17,7 @@ for ii in *.xyz; do
 %chk=${i}.chk
 %nproc=16
 %mem=5gb
-#B3LYP CBSB7 SP
+#B3LYP CBSB7 OPT
 
 ${i} radical distorted
 
@@ -30,6 +30,7 @@ EOF
            echo "$LINE" >> "${i}.gjf"
        fi   
     done < "./${i}.temp"
+    echo -e "" >> "${i".gjf"
     echo "Reading coordinates: ${i}.temp"
     rm ${i}.temp
 done
