@@ -15,7 +15,7 @@ EOF
     while read -r LINE ; do
            echo "$LINE" >> "${i}.gjf"
     done < "./${i}.xyz"
-    echo -e "\n\n" >> "${i}.gjf"
+    echo -e "\n" >> "${i}.gjf"
     echo "Reading coordinates: ${i}.xyz"
 done
 echo "Successfully read molecular coordinates."
