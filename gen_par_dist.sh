@@ -8,7 +8,7 @@ for ii in *.xyz ; do
 %mem=5gb
 #B3LYP CBSB7 SP EmpiricalDispersion=GD3BJ
 
-Radical Distorted
+Parent Distorted
 
 0 2
 EOF
