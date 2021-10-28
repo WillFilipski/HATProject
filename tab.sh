@@ -15,7 +15,7 @@ done
 ROW=0
 for ii in *parent*.log ; do
     i=${ii%.log}
-    if [[ ${i} =~ "1_" || ${i} =~ "9_" || ${i} =~ "48_" || ${i} =~ "49_" ]] ; then
+    if [[ ${i} == "1_parent" || ${i} == "9_parent" || ${i} =~ "48_" || ${i} =~ "49_" ]] ; then
         cat > "process2.temp" << EOF
 ${i} $(grep -i Done ${i}.log | tail -1) >> "process2.temp
 ${i} $(grep -i Done ${i}.log | tail -1) >> "process2.temp
