@@ -6,7 +6,7 @@ for ii in *.xyz; do
 %chk=${i}.chk
 %nproc=8
 %mem=8GB
-#B3LYP CBSB7 SP Stable
+#B3LYP CBSB7 Stable
 
 Wavefunction Stability Analysis
 
