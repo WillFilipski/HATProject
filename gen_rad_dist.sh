@@ -30,7 +30,7 @@ EOF
            echo "$LINE" >> "${i}.gjf"
        fi   
     done < "./${i}.temp"
-    echo -e "" >> "${i".gjf"
+    echo -e "" >> "${i}".gjf"
     echo "Reading coordinates: ${i}.temp"
     rm ${i}.temp
 done
